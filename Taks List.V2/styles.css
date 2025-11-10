@@ -1,0 +1,147 @@
+:root {
+    --base-color: white;
+    --base-variant: #e8e9ed;
+    --text-color: #111528;
+    --secondary-text: #232738;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+}
+
+.darkmode {
+    --base-color: #070b1d;
+    --base-variant: #101425;
+    --text-color: #ffffff;
+    --secondary-text: #a4a5b8;
+    --primary-color: #3a435d;
+    --accent-color: #0071ff;
+.iconBtn {
+    background: white;
+}
+div.tasks{
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffffff;
+}
+   
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, 
+h2 { 
+  font-family: "Montserrat", sans-serif;
+}
+
+body {   
+  background-color: var(--base-color);
+  color: var(--text-color);
+  font-family: "JetBrains Mono", monospace;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 14px;
+  min-height: 100vh;
+}
+
+h1 {
+    text-emphasis: '📒';
+    text-align: center;
+}
+
+form, 
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width:  100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+form textarea {
+    resize: none;
+    width: 100%;
+    min-height: 60px;
+    padding: 14px;
+
+}
+
+form button {
+    padding: 4px;
+    cursor: pointer;   
+}
+
+.taskContainer,
+.task {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.task {
+    padding: 14px;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+.btnContainer {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+}
+
+.iconBtn {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 0 8px;
+    display: grid;
+    place-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+
+.iconBtn:hover {
+    background: rgb(242, 240, 240);
+}
+
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--base-variant);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+#theme-switch svg {
+    fill: var(--primary-color);
+}
+
+#theme-switch svg:last-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+
+.darkmode #theme-switch svg:last-child{
+    display: block;
+}
+
+div.tasks{
+  border-width: 1px;
+  border-style: solid;
+  border-color: #333;
+}
